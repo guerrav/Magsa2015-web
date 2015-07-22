@@ -25,7 +25,7 @@
   // initialize isotope
   $container.isotope({
     // options...
-      itemSelector : '.grid-item',
+      itemSelector : '.project',
       masonry: {
         columnWidth: 100
       }

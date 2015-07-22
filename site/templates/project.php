@@ -56,19 +56,18 @@
       <?php endif ?>
 
     </ul>
-</div>
+
 
  
-<ul class="gallery">
-<?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
-
-  <li>
-    <a rel="gallery" href="<?php echo $image->url() ?>" ><img class ="thumb" src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>"></a>
-  </li>
-
-<?php endforeach ?>
-</ul>
     
+    <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
+      <div class="gallery">
+        <a rel="gallery" href="<?php echo $image->url() ?>" ><img class ="thumb" src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>"></a>
+      </div>
+    <?php endforeach ?>
+    
+
+</div>   
 
 
 <?php snippet('footer') ?>

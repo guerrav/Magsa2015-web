@@ -8,7 +8,7 @@
       <div class="grid">
 
         
-        <?php foreach(page('projects')->children()->visible() as $project): ?>
+        <?php foreach(page('projects')->children()->visible()->flip() as $project): ?>
           <div class="project grid-item <?php
               $count = 0;
               foreach ($tags = explode(",", $project->tags()) as $tag) {
